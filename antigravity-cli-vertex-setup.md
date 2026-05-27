@@ -159,6 +159,18 @@ gcloud auth application-default set-quota-project gen-lang-client-0212455734
 
 ---
 
+## 설정 파일 위치
+
+agy의 설정 파일은 다음 경로에 저장됩니다:
+
+```
+~/.gemini/antigravity-cli/
+```
+
+설정 커스터마이징이나 초기화가 필요할 때 이 경로를 참조하세요.
+
+---
+
 ## 참고
 
 - [공식 문서](https://antigravity.google/docs/cli-using)
