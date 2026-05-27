@@ -154,6 +154,18 @@ gcloud auth application-default login
 gcloud auth application-default set-quota-project gen-lang-client-0212455734
 ```
 
+### `set-quota-project` 실패 (serviceusage.services.use 권한 없음)
+
+IAM에 두 가지 역할이 모두 필요합니다:
+
+| 역할 | 용도 |
+|------|------|
+| `roles/aiplatform.user` | Vertex AI API 호출 |
+| `roles/serviceusage.serviceUsageConsumer` | quota 프로젝트 지정 |
+
+둘 중 하나라도 없으면 `set-quota-project`가 실패합니다.  
+관리자(ysys143@wedatalab.com)에게 두 역할 모두 요청하세요.
+
 ### SSH 환경 (원격 서버)에서 사용 시
 터미널에 URL과 코드가 출력됩니다. 로컬 브라우저에서 해당 URL을 열어 인증을 완료하세요.
 
